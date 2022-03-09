@@ -1,0 +1,111 @@
+#root{
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+}
+
+.calculator {
+  margin: 1rem 0;
+  background: linear-gradient(145deg, #00d1ff, #00b0e6);
+  box-shadow:  5px 5px 17px #00bffa,
+               -3px -3px 17px #00c7ff;
+  border-radius: 15px;
+  padding: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  border: 1px solid #333;
+  
+}
+
+.header{ 
+  text-align: right;
+}
+
+.header ul {
+  
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+
+
+}
+
+.header ul li{
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.inputOperations .input {
+  padding: 2rem;
+  width: 80%;
+  font-size:x-large;
+  text-align: right;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.Keyboard{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1rem;
+}
+
+.Keyboard .operation{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Keyboard .actions {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  gap: 0.5rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.Keyboard .actions .btn-num{
+  padding: 2rem;
+}
+
+
+.teclado-calculator{
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+
+  margin-bottom: 1rem;
+}
+
+.btn-num {
+  padding: 2rem;
+  border-radius: 15px;
+  background: #00c3ff;
+  box-shadow: inset 20px 20px 46px #00a6d9,
+              inset -20px -20px 46px #00e0ff;
+
+  border: 1px solid #222; 
+}
+
+.btn-num:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-num:active {
+  transform: scale(90%);
+}
+

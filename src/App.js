@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Header } from "./Components/Header";
+import { KeyboardOperation } from "./Components/KeyboardOperation";
+import { InputOperations } from "./Components/InputOperations";
 
-function App() {
+import { ContexOperations } from "./Hooks/ContextOperation";
+
+import "./Assets/css/App.css";
+
+export function App() {
+
+  const [ value, setValue ] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div></div>
+      <div className="calculator">
+        <Header />
+        <ContexOperations.Provider value={ { value: value, setValue: setValue } } >
 
-export default App;
+          <main className="main-calulator">
+            <InputOperations inputNum={ value } /> 
+            <KeyboardOperation />
+          </main>
+
+        </ContexOperations.Provider>
+      </div>
+      <div></div>
+    </>
+  )
+}
